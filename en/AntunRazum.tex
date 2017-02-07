@@ -1,0 +1,172 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+  top=0.79in,
+  bottom=0.79in,
+  left=0.79in,
+  right=0.79in,
+]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{10pt}
+\newlength{\tablewidth}
+
+\setlist[itemize]{topsep=0pt, itemsep=-0.5em}
+\setlist[itemize,1]{before=\vspace{-1.2em}, after=\vspace{-0.8em}}
+
+\newenvironment{period}[2]{%
+\newcommand{\sarma}{#2}%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\vspace{0.2em}
+\begin{tabular}{@{}p{0.7\tablewidth}>{\raggedleft\arraybackslash}p{0.3\tablewidth}@{}}%
+#1 & #2
+\end{tabular} \\
+\setlist[itemize,1]{before=\vspace{-1.2em}}
+\begin{itemize}
+}{%
+\end{itemize} \\
+}
+
+\newenvironment{skills}{%
+\setlength{\tablewidth}{\linewidth}
+\addtolength{\tablewidth}{-2\tabcolsep}
+\setlength{\extrarowheight}{0.2em}
+\begin{tabular}{@{}p{0.1\tablewidth}p{0.9\tablewidth}@{}}
+}{%
+\end{tabular}
+}
+
+\titleformat{\section}{\uppercase}{}{0pt}{}[{\titlerule}]
+\titleformat{\subsection}{\bf}{}{0pt}{}{}
+\titlespacing{\section}{0pt}{0.5em}{0.3em}
+\titlespacing{\subsection}{0pt}{0.3em}{0pt}
+
+\begin{document}
+\fontfamily{\sfdefault}
+\selectfont
+
+\begin{minipage}{.5\textwidth}
+\LARGE{Antun Razum}\\
+\normalsize{
+  Jela 8, 10040 Zagreb, Croatia \\
+  \href{tel://385-91-796-5124}{+385 91 796 5124}
+}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\raggedleft
+\href{mailto:antun.razum@gmail.com}{antun.razum@gmail.com} \\
+\href{https://hr.linkedin.com/in/antunrazum}{hr.linkedin.com/in/antunrazum} \\
+\href{https://github.com/arazum}{github.com/arazum}
+\end{minipage}
+
+\vspace{0.5em}
+
+\section{work experience}
+
+\subsection{Jane Street, London UK; New York, NY}
+\begin{period}{Software Engineering Intern}{Feb 2016 -- Apr 2016}
+  \item OCaml, Mercurial, Unix
+\end{period}
+
+\subsection{Facebook, Menlo Park, CA}
+\begin{period}{Software Engineering Intern}{Jul 2015 -- Oct 2015}
+  \item Android efficiency \& reliability team; Java, Python, Mercurial, Git, Unix
+\end{period}
+\begin{period}{Software Engineering Intern}{Jul 2014 -- Sep 2014}
+  \item Web speed team; PHP, JS, SQL, Mercurial, Unix
+\end{period}
+
+\subsection{Other}
+\begin{period}{Technical assistant on the Faculty of Electrical Engineering and Computing}{Oct 2012 -- Apr 2015}
+  \item Courses: 
+    \textit{Mathematics},
+    \textit{Electronics},
+    \textit{Algorithms and Data Structures},
+    \textit{Digital Logics}
+\end{period}
+\begin{period}{Problem author and instructor for programming competitions}{Sep 2012 -- Apr 2015}
+  \item Problem author for National Competitions in Informatics (\textit{Infokup}) for primary school
+  \item Head instructor of \textit{XV Gymnasium} senior team for programming competitions
+  \item Instructor at Computer Science camp courses: 
+    \textit{Basic and Advanced Algorithms},
+    \textit{Web Development}
+\end{period}
+
+\section{education}
+
+\subsection{University of Zagreb, Faculty of Electrical Engineering and Computing, Croatia}
+\begin{period}{Pursuing MSc in Computer Science}{Oct 2015 -- Jul 2017}
+  \item GPA: 5.0
+  \item relevant courses:
+    \textit{Machine Learning},
+    \textit{Deep Learning},
+    \textit{Analysis of Massive Datasets}
+\end{period}
+\begin{period}{BSc in Computer Science}{Oct 2012 -- Jul 2015}
+  \item GPA: 5.0
+\end{period}
+
+\section{competitions}
+
+\begin{period}{Artificial Intelligence Battleground (\textit{AIBG})}{Dec 2016}
+  \item 2 \textsuperscript{nd} place / 16 teams
+\end{period}
+\begin{period}{\textit{ICPC} Central Europe Regional Contest (\textit{CERC})}{2013; 2014; 2015; 2016}
+  \item 
+    20 \textsuperscript{th} place / 72 teams;
+    9  \textsuperscript{th} place / 79 teams;
+    23 \textsuperscript{rd} place / 62 teams;
+    19 \textsuperscript{th} place / 70 teams
+\end{period}
+\begin{period}{International Olympiad in Informatics (\textit{IOI})}{Sep 2012}
+  \item Silver medal
+\end{period}
+\begin{period}{Central-European Olympiad in Informatics (\textit{CEOI})}{Jul 2012}
+  \item Silver medal
+\end{period}
+\begin{period}{Croatian National Competition (\textit{DMIH})}{2007 -- 2011}
+  \item First place: 2007, 2008, 2009, 2011; Second place: 2010
+\end{period}
+
+\section{awards}
+
+\begin{period}{Top student dean's award (Josip Lončar award)}{2013; 2014; 2015}
+  \item First and second year undergraduate; Special award for the whole Bachelor’s program
+\end{period}
+
+\section{technical skills}
+
+\begin{skills}
+  Intermediate &
+  \begin{itemize}
+    \item Algorithms and problem sovling -- programming competitions
+    \item \textbf{C/C++} -- programming competitions, personal and university projects
+    \item \textbf{Java} -- Facebook, university course, university projects
+  \end{itemize} \\
+  Basic &
+  \begin{itemize}
+    \item \textbf{OCaml} -- Jane Street
+    \item \textbf{Python}, \textbf{PHP}, \textbf{JS}, \textbf{SQL} -- Facebook, personal and university projects
+    \item \textbf{Haskell} -- university course
+    \item \textbf{Bash}, \textbf{Unix}, \textbf{Git}, \textbf{Mercurial}, \textbf{LaTeX} -- various personal, university and company projects
+  \end{itemize} \\
+\end{skills}
+
+\section{other skills and interests}
+
+\begin{skills}
+  Languages & 
+    Croatian (native), English (fluent) \\ 
+  Interests & 
+    Choir Singing, Music, Traveling, Biking, Hiking, Swimming \\ 
+\end{skills}
+
+\end{document}
